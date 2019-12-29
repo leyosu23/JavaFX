@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yoonseop_lee_sec008_comp228_exercise1.dentalController">
+   <children>
+      <Label layoutX="16.0" layoutY="92.0" text="Name of patient:" />
+      <Label layoutX="61.0" layoutY="161.0" text="Address:" />
+      <Label layoutX="46.0" layoutY="230.0" text="Provinces:" />
+      <Label layoutX="362.0" layoutY="75.0" text="Dental Services Available" />
+      <Label layoutX="88.0" layoutY="14.0" text="DENTAL PAYMENT SYSTEM">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="checkboxFlossing" layoutX="377.0" layoutY="127.0" mnemonicParsing="false" text="Flossing" />
+      <CheckBox fx:id="checkboxFllling" layoutX="376.0" layoutY="170.0" mnemonicParsing="false" text="Filling" />
+      <CheckBox fx:id="checkboxRootCanal" layoutX="376.0" layoutY="213.0" mnemonicParsing="false" text="Root Canal" />
+      <ComboBox fx:id="comboBoxPatientProvince" accessibleText="asd" layoutX="126.0" layoutY="226.0" onAction="#comboBoxPatientProvinceChanged" prefWidth="150.0" />
+      <Label layoutX="480.0" layoutY="126.0" text="\$ 20.00" />
+      <Label layoutX="480.0" layoutY="174.0" text="\$ 75.00" />
+      <Label layoutX="480.0" layoutY="222.0" text="\$ 150.00" />
+      <TextField fx:id="labelPatientName" layoutX="127.0" layoutY="88.0" />
+      <TextField fx:id="labelPatientAddress" layoutX="127.0" layoutY="157.0" />
+      <Label fx:id="labelOutput" layoutX="104.0" layoutY="358.0" text="Output: payment details here" />
+      <Button fx:id="buttonCalculate" layoutX="389.0" layoutY="292.0" mnemonicParsing="false" onAction="#buttonCalculateClicked" prefHeight="36.0" prefWidth="79.0" text="Calculate" />
+      <HBox layoutX="73.0" layoutY="298.0" prefHeight="25.0" prefWidth="229.0">
+         <children>
+            <RadioButton fx:id="radiobuttonSenior" mnemonicParsing="false" text="Senior">
+               <toggleGroup>
+                  <ToggleGroup fx:id="discountToggleGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radiobuttonKids" mnemonicParsing="false" text="Kids and Youth" toggleGroup="$discountToggleGroup" />
+            <RadioButton fx:id="radiobuttonAdult" mnemonicParsing="false" text="Adult" toggleGroup="$discountToggleGroup" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
